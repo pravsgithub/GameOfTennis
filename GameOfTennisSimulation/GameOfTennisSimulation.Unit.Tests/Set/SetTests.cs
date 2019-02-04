@@ -3,7 +3,7 @@
 namespace GameOfTennisSimulation.Unit.Tests.Set
 {
     [TestFixture]
-    class SetTests
+    public class SetTests
     {
 
         //a player wins the set if he/she wins 6 games
@@ -34,6 +34,17 @@ namespace GameOfTennisSimulation.Unit.Tests.Set
 
             var setResult = set.Generate();
             Assert.That(setResult.Score == "1 - 0");
+        }
+
+        [Test]
+        public void GivenASetSimulationIsRunForPlayer1ToWin_Then_SetResultMustProvideTheWinnerAndTheScores()
+        {
+            var player1 = new Player { Name = "Player 1" };
+            var player2 = new Player { Name = "Player 2" };
+            var set = new GameOfTennisSimulation.Set(player1, player2);
+            var setResult = set.SimulateWinFor(player1);
+
+            Assert.That(setResult.Result == "Player 1 wins");
         }
     }
 }

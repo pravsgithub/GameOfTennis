@@ -1,4 +1,6 @@
-﻿namespace GameOfTennisSimulation
+﻿using System;
+
+namespace GameOfTennisSimulation
 {
     public class Set
     {
@@ -24,6 +26,31 @@
         public SetResult Generate()
         {
             var setGeneratedResult = new SetResult();
+            setGeneratedResult.GamesWonByPlayer1 = _player1GamesCount;
+            setGeneratedResult.GamesWonByPlayer2 = _player2GamesCount;
+
+            return setGeneratedResult;
+        }
+
+        public SetResult SimulateWinFor(Player player)
+        {
+            var setGeneratedResult = new SetResult();
+
+            var random = new Random();
+            while (_player1GamesCount != 6)
+            {
+                if (random.Next(2) == 1)
+                {
+                    GameWonBy(_player1);
+                }
+                else
+                {
+
+                    GameWonBy(_player2);
+                }
+            }
+            
+
             setGeneratedResult.GamesWonByPlayer1 = _player1GamesCount;
             setGeneratedResult.GamesWonByPlayer2 = _player2GamesCount;
 
