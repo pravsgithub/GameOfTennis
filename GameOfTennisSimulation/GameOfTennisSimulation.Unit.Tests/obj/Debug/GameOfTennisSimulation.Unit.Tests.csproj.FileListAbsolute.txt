@@ -1,0 +1,10 @@
+C:\Projects\GameOfTennis\GameOfTennisSimulation\GameOfTennisSimulation.Unit.Tests\bin\Debug\GameOfTennisSimulation.Unit.Tests.dll
+C:\Projects\GameOfTennis\GameOfTennisSimulation\GameOfTennisSimulation.Unit.Tests\bin\Debug\GameOfTennisSimulation.Unit.Tests.pdb
+C:\Projects\GameOfTennis\GameOfTennisSimulation\GameOfTennisSimulation.Unit.Tests\bin\Debug\GameOfTennisSimulation.exe
+C:\Projects\GameOfTennis\GameOfTennisSimulation\GameOfTennisSimulation.Unit.Tests\bin\Debug\nunit.framework.dll
+C:\Projects\GameOfTennis\GameOfTennisSimulation\GameOfTennisSimulation.Unit.Tests\bin\Debug\GameOfTennisSimulation.pdb
+C:\Projects\GameOfTennis\GameOfTennisSimulation\GameOfTennisSimulation.Unit.Tests\bin\Debug\nunit.framework.pdb
+C:\Projects\GameOfTennis\GameOfTennisSimulation\GameOfTennisSimulation.Unit.Tests\bin\Debug\nunit.framework.xml
+C:\Projects\GameOfTennis\GameOfTennisSimulation\GameOfTennisSimulation.Unit.Tests\obj\Debug\GameOfTennisSimulation.Unit.Tests.csprojResolveAssemblyReference.cache
+C:\Projects\GameOfTennis\GameOfTennisSimulation\GameOfTennisSimulation.Unit.Tests\obj\Debug\GameOfTennisSimulation.Unit.Tests.dll
+C:\Projects\GameOfTennis\GameOfTennisSimulation\GameOfTennisSimulation.Unit.Tests\obj\Debug\GameOfTennisSimulation.Unit.Tests.pdb
