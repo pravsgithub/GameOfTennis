@@ -3,3 +3,4 @@ C:\Projects\GameOfTennis\GameOfTennisSimulation\GameOfTennisSimulation\bin\x64\D
 C:\Projects\GameOfTennis\GameOfTennisSimulation\GameOfTennisSimulation\bin\x64\Debug\GameOfTennisSimulation.pdb
 C:\Projects\GameOfTennis\GameOfTennisSimulation\GameOfTennisSimulation\obj\x64\Debug\GameOfTennisSimulation.exe
 C:\Projects\GameOfTennis\GameOfTennisSimulation\GameOfTennisSimulation\obj\x64\Debug\GameOfTennisSimulation.pdb
+C:\Projects\GameOfTennis\GameOfTennisSimulation\GameOfTennisSimulation\obj\x64\Debug\GameOfTennisSimulation.csprojResolveAssemblyReference.cache

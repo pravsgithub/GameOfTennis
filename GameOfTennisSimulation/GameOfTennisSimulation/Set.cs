@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace GameOfTennisSimulation
 {
@@ -10,26 +11,38 @@ namespace GameOfTennisSimulation
         private  int _player1GamesCount;
         private  int _player2GamesCount;
 
+        private const int SetsToBePlayed = 3;
+
+        private int _player1SetsWinCount;
+        private int _player2SetsWinCount;
+
         public Set(Player player1, Player player2)
         {
             _player1 = player1;
             _player2 = player2;
         }
-
-        public void GameWonBy(Player player)
-        {
-            if (player == _player1) { _player1GamesCount++;}
-
-            if (player == _player2) { _player2GamesCount++; }
-        }
-
         public SetResult Generate()
         {
-            var setGeneratedResult = new SetResult();
-            setGeneratedResult.GamesWonByPlayer1 = _player1GamesCount;
-            setGeneratedResult.GamesWonByPlayer2 = _player2GamesCount;
+            var setResult = new SetResult();
+            var random = new Random();
 
-            return setGeneratedResult;
+            for (int i = 1; i == SetsToBePlayed; i++)
+            {
+                if (random.Next(2) == 1)
+                {
+                    SimulateWinForPlayer1();
+                    _player1SetsWinCount++;
+                }
+                else
+                {
+                    SimulateWinForPlayer2();
+                    _player2SetsWinCount++;
+                }
+            }
+
+            setResult.Winner = _player1SetsWinCount >= 2 ? _player1 : _player2;
+
+            return setResult;
         }
 
         public SetResult SimulateWinForPlayer1()
@@ -80,6 +93,13 @@ namespace GameOfTennisSimulation
             setGeneratedResult.GamesWonByPlayer2 = _player2GamesCount;
 
             return setGeneratedResult;
+        }
+
+        private void GameWonBy(Player player)
+        {
+            if (player == _player1) { _player1GamesCount++; }
+
+            if (player == _player2) { _player2GamesCount++; }
         }
     }
 }
