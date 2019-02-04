@@ -13,36 +13,29 @@ namespace GameOfTennisSimulation
 
         private const int SetsToBePlayed = 3;
 
-        private int _player1SetsWinCount;
-        private int _player2SetsWinCount;
-
         public Set(Player player1, Player player2)
         {
             _player1 = player1;
             _player2 = player2;
         }
-        public SetResult Generate()
+        public List<SetResult> Generate()
         {
-            var setResult = new SetResult();
+            var setResults = new List<SetResult>();
             var random = new Random();
 
-            for (int i = 1; i == SetsToBePlayed; i++)
+            for (int i = 1; i <= SetsToBePlayed; i++)
             {
                 if (random.Next(2) == 1)
                 {
-                    SimulateWinForPlayer1();
-                    _player1SetsWinCount++;
+                    setResults.Add(SimulateWinForPlayer1());
                 }
                 else
                 {
-                    SimulateWinForPlayer2();
-                    _player2SetsWinCount++;
+                    setResults.Add(SimulateWinForPlayer2());
                 }
             }
 
-            setResult.Winner = _player1SetsWinCount >= 2 ? _player1 : _player2;
-
-            return setResult;
+            return setResults;
         }
 
         public SetResult SimulateWinForPlayer1()
@@ -63,11 +56,10 @@ namespace GameOfTennisSimulation
                     _player2GamesCount = random.Next(0, 4);
                 }
             }
-            
 
-            setGeneratedResult.GamesWonByPlayer1 = _player1GamesCount;
-            setGeneratedResult.GamesWonByPlayer2 = _player2GamesCount;
 
+            setGeneratedResult.SetWinner = _player1GamesCount == 6 ? _player1 : _player2;
+            setGeneratedResult.Score = $"{_player1GamesCount} - {_player2GamesCount}";
             return setGeneratedResult;
         }
 
@@ -89,9 +81,8 @@ namespace GameOfTennisSimulation
             }
 
 
-            setGeneratedResult.GamesWonByPlayer1 = _player1GamesCount;
-            setGeneratedResult.GamesWonByPlayer2 = _player2GamesCount;
-
+            setGeneratedResult.SetWinner = _player1GamesCount == 6 ? _player1 : _player2;
+            setGeneratedResult.Score = $"{_player1GamesCount} - {_player2GamesCount}";
             return setGeneratedResult;
         }
 

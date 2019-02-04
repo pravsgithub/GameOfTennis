@@ -2,8 +2,9 @@
 
 namespace GameOfTennisSimulation
 {
-    internal class MatchResult
+    public class MatchResult
     {
-        
+        public Player Winner { get; set; }
+        public string  FinalScore { get; set; }
     }
 }

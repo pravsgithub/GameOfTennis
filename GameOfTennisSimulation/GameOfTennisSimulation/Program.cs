@@ -6,19 +6,24 @@ namespace GameOfTennisSimulation
     {
         static void Main(string[] args)
         {
-            //on start run a sample simulation
-            //then ask the user to continue
-            //run the simulation for a match and show the result
+            do
+            {
+                Console.WriteLine("Welcome to Game of Tennis - Simulation");
+                var player1 = new Player {Name = "Player 1"};
+                var player2 = new Player {Name = "Player 2"};
+                var match = new Match(player1, player2);
+                var result = match.Simulate();
+                Console.WriteLine($"The winner of the match is {result.Winner.Name}");
+                Console.WriteLine($"The final score is {result.FinalScore}");
+                Console.WriteLine("If you would you like to run the simulation again then enter 'Y' or 'y' or to quit enter 'n' or 'N'");
 
-            var player1 = new Player { Name = "Player 1" };
-            var player2 = new Player { Name = "Player 2" };
-            var set = new Set(player1,player2);
-            var result = set.SimulateWinForPlayer1();
-            Console.WriteLine(result.Result);
-            Console.WriteLine(result.Score);
-            //var matchResult = new MatchResult();
-            //Console.WriteLine($"{result.PlayerName} wins the match - {matchResult.Sets.DisplayResult()}");
-            Console.ReadLine();
+                string userInput = Console.ReadLine();
+                if ((userInput == "n") || (userInput == "N"))
+                    break;
+
+            } while (true);
+
+            
         }
     }
 }

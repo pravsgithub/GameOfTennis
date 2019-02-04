@@ -22,7 +22,7 @@ namespace GameOfTennisSimulation.Unit.Tests.Set
         {
             var setResult = _set.SimulateWinForPlayer1();
 
-            Assert.That(setResult.Result == "Player 1 wins");
+            Assert.That(setResult.SetWinner == _player1);
         }
 
         [Test]
@@ -30,14 +30,29 @@ namespace GameOfTennisSimulation.Unit.Tests.Set
         {
             var setResult = _set.SimulateWinForPlayer2();
 
-            Assert.That(setResult.Result == "Player 2 wins");
+            Assert.That(setResult.SetWinner == _player2);
         }
 
         [Test]
-        public void GivenTheSetSimulationIsRunFor3Sets_Then_WeShouldHaveAWinner()
+        public void GivenASetSimulationIsRunForPlayer1ToWin_Then_SetResultMustProvideTheScore()
         {
-            var result = _set.Generate();
-            Assert.That(result.Winner.Name != string.Empty);
+            var setResult = _set.SimulateWinForPlayer1();
+
+            Assert.That(setResult.Score != string.Empty);
+        }
+
+        [Test]
+        public void GivenTheSetSimulationIsRunFor3Sets_Then_WeShouldHaveAWinnerAndScoresForEachOfTheSet()
+        {
+            var results = _set.Generate();
+
+            Assert.That(results.Count == 3);
+            Assert.That(results[0].SetWinner.Name != string.Empty);
+            Assert.That(results[1].SetWinner.Name != string.Empty);
+            Assert.That(results[2].SetWinner.Name != string.Empty);
+            Assert.That(results[0].Score != string.Empty);
+            Assert.That(results[1].Score != string.Empty);
+            Assert.That(results[2].Score != string.Empty);
         }
     }
 }
