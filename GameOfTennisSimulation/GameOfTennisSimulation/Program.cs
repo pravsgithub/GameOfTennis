@@ -13,10 +13,11 @@ namespace GameOfTennisSimulation
             var player1 = new Player { Name = "Player 1" };
             var player2 = new Player { Name = "Player 2" };
             var set = new Set(player1,player2);
-            var result = set.SimulateWinFor(player1);
-
+            var result = set.SimulateWinForPlayer1();
+            Console.WriteLine(result.Result);
+            Console.WriteLine(result.Score);
             //var matchResult = new MatchResult();
-            //Console.WriteLine($"{matchResult.PlayerName} wins the match - {matchResult.Sets.DisplayResult()}");
+            //Console.WriteLine($"{result.PlayerName} wins the match - {matchResult.Sets.DisplayResult()}");
             Console.ReadLine();
         }
     }
