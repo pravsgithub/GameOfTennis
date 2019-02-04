@@ -23,5 +23,17 @@ namespace GameOfTennisSimulation.Unit.Tests.Set
             var setResult = set.Generate();
             Assert.That(setResult.Result == "Player 1 wins");
         }
+
+        [Test]
+        public void GivenAPlayerWinsAGame_Then_TheScoreShouldBe_1_0()
+        {
+            var player1 = new Player { Name = "Player 1" };
+            var player2 = new Player { Name = "Player 2" };
+            var set = new GameOfTennisSimulation.Set(player1, player2);
+            set.GameWonBy(player1);
+
+            var setResult = set.Generate();
+            Assert.That(setResult.Score == "1 - 0");
+        }
     }
 }

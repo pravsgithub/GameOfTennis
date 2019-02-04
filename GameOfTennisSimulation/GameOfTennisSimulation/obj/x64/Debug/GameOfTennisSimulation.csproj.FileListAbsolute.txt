@@ -1,0 +1,5 @@
+C:\Projects\GameOfTennis\GameOfTennisSimulation\GameOfTennisSimulation\bin\x64\Debug\GameOfTennisSimulation.exe.config
+C:\Projects\GameOfTennis\GameOfTennisSimulation\GameOfTennisSimulation\bin\x64\Debug\GameOfTennisSimulation.exe
+C:\Projects\GameOfTennis\GameOfTennisSimulation\GameOfTennisSimulation\bin\x64\Debug\GameOfTennisSimulation.pdb
+C:\Projects\GameOfTennis\GameOfTennisSimulation\GameOfTennisSimulation\obj\x64\Debug\GameOfTennisSimulation.exe
+C:\Projects\GameOfTennis\GameOfTennisSimulation\GameOfTennisSimulation\obj\x64\Debug\GameOfTennisSimulation.pdb

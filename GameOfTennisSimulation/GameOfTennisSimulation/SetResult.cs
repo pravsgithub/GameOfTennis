@@ -6,5 +6,7 @@
         public int GamesWonByPlayer2 { get; set; }
     
         public string Result => GamesWonByPlayer1 == 6 ? "Player 1 wins" : "Player 2 wins";
+
+        public string Score => $"{GamesWonByPlayer1} - {GamesWonByPlayer2}";
     }
 }
